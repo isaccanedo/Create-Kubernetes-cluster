@@ -8,7 +8,7 @@ Verifique se o Minikube está instalado corretamente, executando o comando minik
 minikube version
 ```
 
-### Run
+### Execução
 Inicie o cluster executando o comando minikube start:
 
 ```
