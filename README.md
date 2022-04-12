@@ -26,7 +26,9 @@ Para interagir com o Kubernetes durante este bootcamp, usaremos a interface de l
 kubectl version
 ```
 
-´´´
-Versão do cluster
-Para interagir com o Kubernetes durante este bootcamp, usaremos a interface de linha de comando, kubectl. Explicaremos o kubectl em detalhes nos próximos módulos, mas, por enquanto, veremos apenas algumas informações do cluster. Para verificar se o kubectl está instalado, você pode executar o comando kubectl version:
 ```
+Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.4", GitCommit:"e87da0bd6e03ec3fea7933c4b5263d151aafd07c", GitTreeState:"clean", BuildDate:"2021-02-18T16:12:00Z", GoVersion:"go1.15.8", Compiler:"gc", Platform:"linux/amd64"}
+Server Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.2", GitCommit:"faecb196815e248d3ecfb03c680a4507229c2a56", GitTreeState:"clean", BuildDate:"2021-01-13T13:20:00Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd64"}
+```
+
+
