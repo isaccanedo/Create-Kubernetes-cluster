@@ -247,6 +247,179 @@ $ curl http://localhost:8001/version
 }$
 ```
 
+### $ curl http://localhost:8001/api/v1/nmespaces/default/pods
+```
+$ curl http://localhost:8001/api/v1/nmespaces/default/pods/$POD_NAME/
+<a href="/api/v1/namespaces/default/pods/">Moved Permanently</a>.
+
+namespaces/default/pods:8001/api/v1/ 
+{
+  "kind": "PodList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "1203"
+  },
+  "items": [
+    {
+      "metadata": {
+        "name": "kubernetes-bootcamp-57978f5f5d-j9rjf",
+        "generateName": "kubernetes-bootcamp-57978f5f5d-",
+        "namespace": "default",
+        "uid": "bdc11e3e-3512-49fa-b062-8c5cc74c53aa",
+        "resourceVersion": "670",
+        "creationTimestamp": "2022-04-12T17:36:31Z",
+        "labels": {
+          "app": "kubernetes-bootcamp",
+          "pod-template-hash": "57978f5f5d"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "ReplicaSet",
+            "name": "kubernetes-bootcamp-57978f5f5d",
+            "uid": "246ffdef-9380-4c96-92a2-29f0290e115a",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2022-04-12T17:36:31Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:metadata":{"f:generateName":{},"f:labels":{".":{},"f:app":{},"f:pod-template-hash":{}},"f:ownerReferences":{".":{},"k:{\"uid\":\"246ffdef-9380-4c96-92a2-29f0290e115a\"}":{".":{},"f:apiVersion":{},"f:blockOwnerDeletion":{},"f:controller":{},"f:kind":{},"f:name":{},"f:uid":{}}}},"f:spec":{"f:containers":{"k:{\"name\":\"kubernetes-bootcamp\"}":{".":{},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{}}},"f:dnsPolicy":{},"f:enableServiceLinks":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:terminationGracePeriodSeconds":{}}}
+          },
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2022-04-12T17:36:32Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:status":{"f:conditions":{"k:{\"type\":\"ContainersReady\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}},"k:{\"type\":\"Initialized\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}},"k:{\"type\":\"Ready\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:containerStatuses":{},"f:hostIP":{},"f:phase":{},"f:podIP":{},"f:podIPs":{".":{},"k:{\"ip\":\"172.18.0.6\"}":{".":{},"f:ip":{}}},"f:startTime":{}}}
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "default-token-x9x9q",
+            "secret": {
+              "secretName": "default-token-x9x9q",
+              "defaultMode": 420
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "kubernetes-bootcamp",
+            "image": "gcr.io/google-samples/kubernetes-bootcamp:v1",
+            "resources": {
+              
+            },
+            "volumeMounts": [
+              {
+                "name": "default-token-x9x9q",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "default",
+        "serviceAccount": "default",
+        "nodeName": "minikube",
+        "securityContext": {
+          
+        },
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Running",
+        "conditions": [
+          {
+            "type": "Initialized",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2022-04-12T17:36:31Z"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2022-04-12T17:36:32Z"
+          },
+          {
+            "type": "ContainersReady",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2022-04-12T17:36:32Z"
+          },
+          {
+            "type": "PodScheduled",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2022-04-12T17:36:31Z"
+          }
+        ],
+        "hostIP": "10.0.0.28",
+        "podIP": "172.18.0.6",
+        "podIPs": [
+          {
+            "ip": "172.18.0.6"
+          }
+        ],
+        "startTime": "2022-04-12T17:36:31Z",
+        "containerStatuses": [
+          {
+            "name": "kubernetes-bootcamp",
+            "state": {
+              "running": {
+                "startedAt": "2022-04-12T17:36:32Z"
+              }
+            },
+            "lastState": {
+              
+            },
+            "ready": true,
+            "restartCount": 0,
+            "image": "jocatalin/kubernetes-bootcamp:v1",
+            "imageID": "docker-pullable://jocatalin/kubernetes-bootcamp@sha256:0d6b8ee63bb57c5f5b6156f446b3bc3b3c143d233037f3a2f00e279c8fcc64af",
+            "containerID": "docker://775b471ea19984c7ce9f79fb6f6bb381f48d55a1298d646ec4959fe3920b0e49",
+            "started": true
+          }
+        ],
+        "qosClass": "BestEffort"
+      }
+    }
+  ]
+$ 
+```
+
 Nota: Verifique a parte superior do terminal. O proxy foi executado em uma nova aba (Terminal 2), e os comandos recentes foram executados na aba original (Terminal 1). O proxy ainda é executado na segunda guia, e isso permitiu que nosso comando curl funcionasse usando localhost:8001.
 
 **Obeservação**
