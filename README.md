@@ -207,3 +207,27 @@ $ kubectl get deployments
 NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
 kubernetes-bootcamp   1/1     1            1           5m22s
 ```
+
+Vemos que há 1 implantação executando uma única instância do seu aplicativo. A instância está sendo executada dentro de um contêiner do Docker em seu nó.
+
+### Veja nosso aplicativo
+Os pods executados no Kubernetes são executados em uma rede privada e isolada. Por padrão, eles são visíveis de outros pods e serviços dentro do mesmo cluster kubernetes, mas não fora dessa rede. Quando usamos kubectl, estamos interagindo por meio de um endpoint de API para nos comunicarmos com nosso aplicativo.
+
+Abordaremos outras opções sobre como expor seu aplicativo fora do cluster kubernetes no Módulo 4.
+
+O comando kubectl pode criar um proxy que encaminhará as comunicações para a rede privada de todo o cluster. O proxy pode ser encerrado pressionando control-C e não mostrará nenhuma saída enquanto estiver em execução.
+
+Abriremos uma segunda janela de terminal para executar o proxy.
+
+```
+echo -e "\n\n\n\e[92mStarting Proxy. After starting it will not output a response. Please click the first Terminal Tab\n"; 
+kubectl proxy
+```
+
+Agora temos uma conexão entre nosso host (o terminal online) e o cluster Kubernetes. O proxy permite o acesso direto à API desses terminais.
+
+Você pode ver todas essas APIs hospedadas por meio do endpoint do proxy. Por exemplo, podemos consultar a versão diretamente pela API usando o comando curl:
+
+```
+curl http://localhost:8001/version
+```
