@@ -173,3 +173,14 @@ $ kubectl get nodes
 NAME       STATUS   ROLES                  AGE     VERSION
 minikube   Ready    control-plane,master   7m15s   v1.20.2
 ```
+
+### Implante nosso aplicativo
+Vamos implantar nosso primeiro aplicativo no Kubernetes com o comando kubectl create deployment. Precisamos fornecer o nome da implantação e o local da imagem do aplicativo (inclua o URL completo do repositório para imagens hospedadas fora do hub do Docker).
+
+```
+kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1
+```
+
+```
+deployment.apps/kubernetes-bootcamp created
+```
