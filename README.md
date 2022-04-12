@@ -232,6 +232,21 @@ Você pode ver todas essas APIs hospedadas por meio do endpoint do proxy. Por ex
 curl http://localhost:8001/version
 ```
 
+```
+$ curl http://localhost:8001/version
+{
+  "major": "1",
+  "minor": "20",
+  "gitVersion": "v1.20.2",
+  "gitCommit": "faecb196815e248d3ecfb03c680a4507229c2a56",
+  "gitTreeState": "clean",
+  "buildDate": "2021-01-13T13:20:00Z",
+  "goVersion": "go1.15.5",
+  "compiler": "gc",
+  "platform": "linux/amd64"
+}$
+```
+
 Nota: Verifique a parte superior do terminal. O proxy foi executado em uma nova aba (Terminal 2), e os comandos recentes foram executados na aba original (Terminal 1). O proxy ainda é executado na segunda guia, e isso permitiu que nosso comando curl funcionasse usando localhost:8001.
 
 **Obeservação**
