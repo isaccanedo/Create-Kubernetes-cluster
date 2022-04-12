@@ -14,3 +14,5 @@ Inicie o cluster executando o comando minikube start:
 ```
 minikube start
 ```
+
+<img src="minikube.png">
