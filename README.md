@@ -231,3 +231,23 @@ Você pode ver todas essas APIs hospedadas por meio do endpoint do proxy. Por ex
 ```
 curl http://localhost:8001/version
 ```
+
+Nota: Verifique a parte superior do terminal. O proxy foi executado em uma nova aba (Terminal 2), e os comandos recentes foram executados na aba original (Terminal 1). O proxy ainda é executado na segunda guia, e isso permitiu que nosso comando curl funcionasse usando localhost:8001.
+
+**Obeservação**
+Se a porta 8001 não estiver acessível, verifique se o proxy kubectl iniciado acima está em execução.
+
+O servidor de API criará automaticamente um endpoint para cada pod, com base no nome do pod, que também pode ser acessado por meio do proxy.
+
+Primeiro precisamos pegar o nome do Pod, e vamos armazenar na variável de ambiente POD_NAME:
+
+```
+export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+echo Name of the Pod: $POD_NAME
+```
+
+Você pode acessar o pod por meio da API executando:
+
+```
+curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/
+```
