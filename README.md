@@ -40,4 +40,10 @@ Vamos ver os detalhes do cluster. Faremos isso executando kubectl cluster-info:
 kubectl cluster-info
 ```
 
+Durante este tutorial, vamos nos concentrar na linha de comando para implantar e explorar nosso aplicativo. Para visualizar os nós no cluster, execute o comando kubectl get nodes:
 
+```
+kubectl get nodes
+```
+
+Este comando mostra todos os nós que podem ser usados para hospedar nossos aplicativos. Agora temos apenas um nó e podemos ver que seu status está pronto (está pronto para aceitar aplicativos para implantação).
