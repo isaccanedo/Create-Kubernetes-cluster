@@ -64,10 +64,6 @@ Em um mundo de pré-orquestração, os scripts de instalação costumavam ser us
 
 ### Implantar seu primeiro aplicativo no Kubernetes
 
+<img src="module_02_first_app.svg">
 
-
-Resumo:
-Deployments
-Kubectl
-O tipo Deployment é responsável por criar e atualizar instâncias de seu aplicativo
 
