@@ -184,3 +184,26 @@ kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kube
 ```
 deployment.apps/kubernetes-bootcamp created
 ```
+
+Great! You just deployed your first application by creating a deployment. This performed a few things for you:
+
+```
+- Procurou um nó adequado onde uma instância do aplicativo pudesse ser executada (temos apenas 1 nó disponível);
+- Agendou o aplicativo para ser executado nesse Node;
+- Configurou o cluster para reagendar a instância em um novo Node quando necessário.
+```
+
+Para listar suas implantações, use o comando get deployments:
+
+```
+kubectl get deployments
+```
+
+# Deploy criado
+
+### $ kubectl get deployments
+```
+$ kubectl get deployments
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+kubernetes-bootcamp   1/1     1            1           5m22s
+```
