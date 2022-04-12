@@ -47,3 +47,27 @@ kubectl get nodes
 ```
 
 Este comando mostra todos os nós que podem ser usados para hospedar nossos aplicativos. Agora temos apenas um nó e podemos ver que seu status está pronto (está pronto para aceitar aplicativos para implantação).
+
+### Usando kubectl para criar uma implantação
+
+Objetivos
+- Saiba mais sobre implantações de aplicativos.
+- Implante seu primeiro aplicativo no Kubernetes com o kubectl.
+
+
+### Implantações do Kubernetes
+Assim que o seu cluster Kubernetes estiver em execução você pode implementar seu aplicativo em contêiners nele. Para fazer isso, você precisa criar uma configuração do tipo Deployment do Kubernetes. O Deployment define como criar e atualizar instâncias do seu aplicativo. Depois de criar um Deployment, o Master do Kubernetes agenda as instâncias do aplicativo incluídas nesse Deployment para ser executado em nós individuais do Cluster.
+
+Depois que as instâncias do aplicativo são criadas, um Controlador do Kubernetes Deployment monitora continuamente essas instâncias. Se o nó que hospeda uma instância ficar inativo ou for excluído, o controlador de Deployment substituirá a instância por uma instância em outro nó no cluster. **Isso fornece um mecanismo de autocorreção para lidar com falhas ou manutenção da máquina**.
+
+Em um mundo de pré-orquestração, os scripts de instalação costumavam ser usados ​​para iniciar aplicativos, mas não permitiam a recuperação de falha da máquina. Ao criar suas instâncias de aplicativo e mantê-las em execução entre nós, as implantações do Kubernetes fornecem uma abordagem fundamentalmente diferente para o gerenciamento de aplicativos.
+
+### Implantar seu primeiro aplicativo no Kubernetes
+
+
+
+Resumo:
+Deployments
+Kubectl
+O tipo Deployment é responsável por criar e atualizar instâncias de seu aplicativo
+
