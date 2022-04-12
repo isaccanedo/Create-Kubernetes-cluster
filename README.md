@@ -31,4 +31,13 @@ Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.4", GitCom
 Server Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.2", GitCommit:"faecb196815e248d3ecfb03c680a4507229c2a56", GitTreeState:"clean", BuildDate:"2021-01-13T13:20:00Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
+OK, o kubectl está configurado e podemos ver tanto a versão do cliente quanto a do servidor. A versão do cliente é a versão kubectl; a versão do servidor é a versão do Kubernetes instalada no mestre. Você também pode ver detalhes sobre a compilação.
+
+### Detalhes do cluster
+Vamos ver os detalhes do cluster. Faremos isso executando kubectl cluster-info:
+
+```
+kubectl cluster-info
+```
+
 
