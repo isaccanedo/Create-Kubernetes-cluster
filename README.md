@@ -76,4 +76,19 @@ Para sua primeira implantação, você usará um aplicativo Node.js empacotado e
 
 Agora que você sabe o que são implantações (Deployment), vamos para o tutorial online e implantar nosso primeiro aplicativo!
 
+O objetivo deste cenário é ajudá-lo a implantar seu primeiro aplicativo no Kubernetes usando o kubectl. Você aprenderá o básico sobre kubectl cli e como interagir com seu aplicativo.
+O terminal online é um ambiente Linux pré-configurado que pode ser usado como um console normal (você pode digitar comandos). Clicar nos blocos de código seguido do sinal ENTER executará esse comando no terminal.
+
+### Noções básicas do kubectl
+Digite kubectl no terminal para ver seu uso. O formato comum de um comando kubectl é: kubectl action resource. Isso executa a ação especificada (como criar, descrever) no recurso especificado (como nó, contêiner). Você pode usar --help após o comando para obter informações adicionais sobre possíveis parâmetros:
+
+```
+kubectl get nodes --help
+```
+
+```
+noções básicas do kubectl
+Assim como o minikube, o kubectl vem instalado no terminal online. Digite kubectl no terminal para ver seu uso. O formato comum de um comando kubectl é: kubectl action resource. Isso executa a ação especificada (como criar, descrever) no recurso especificado (como nó, contêiner). Você pode usar --help após o comando para obter informações adicionais sobre possíveis parâmetros (
+```
+
 
