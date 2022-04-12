@@ -66,4 +66,14 @@ Em um mundo de pré-orquestração, os scripts de instalação costumavam ser us
 
 <img src="module_02_first_app.svg">
 
+Você pode criar e gerenciar uma implantação usando a interface de linha de comando do Kubernetes, Kubectl . O Kubectl usa a API Kubernetes para interagir com o cluster. Neste módulo, você aprenderá os comandos Kubectl mais comuns necessários para criar implantações que executam seus aplicativos em um cluster Kubernetes.
+
+Quando você cria um Deployment, você precisa especificar a imagem do contêiner para seu aplicativo e o número de réplicas que deseja executar. Você pode alterar essas informações posteriormente, atualizando sua implantação; Módulos5 e 6 do bootcamp explica como você pode dimensionar e atualizar suas implantações.
+
+Os aplicativos precisam ser empacotados em um dos formatos de contêiner suportados para serem implantados no Kubernetes
+
+Para sua primeira implantação, você usará um aplicativo Node.js empacotado em um contêiner Docker.(Se você ainda não tentou criar um aplicativo Node.js e implantá-lo usando um contêiner, você pode fazer isso primeiro seguindo as instruções do tutorial Olá, Minikube!).
+
+Agora que você sabe o que são implantações (Deployment), vamos para o tutorial online e implantar nosso primeiro aplicativo!
+
 
